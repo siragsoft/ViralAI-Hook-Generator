@@ -3,9 +3,9 @@ FROM node:20.19.4-bookworm-slim
 
 WORKDIR /app
 
-# Install python3 and python-is-python3 without manual symlinks
+# Install python3, python-is-python3, make, and g++ without manual symlinks
 RUN apt-get update \
- && apt-get install -y --no-install-recommends python3 python-is-python3 ca-certificates \
+ && apt-get install -y --no-install-recommends python3 python-is-python3 make g++ ca-certificates \
  && rm -rf /var/lib/apt/lists/*
 
 COPY package*.json ./
