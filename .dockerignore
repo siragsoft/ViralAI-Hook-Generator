@@ -1,0 +1,7 @@
+node_modules
+dist
+viral.db
+.env
+.git
+Dockerfile
+.dockerignore
